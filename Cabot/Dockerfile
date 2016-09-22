@@ -14,6 +14,9 @@ RUN apt-get install -y build-essential nodejs libpq-dev python-dev npm git curl 
 RUN curl -OL https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 
+RUN cd ~ && git clone https://github.com/lamhaison/cabot-alert-email.git cabot-alert-email
+RUN cd cabot-alert-email && python setup.py install && cd ~ && rm -rf cabot-alert-email
+
 # Deploy cabot
 RUN git clone https://github.com/arachnys/cabot.git /cabot
 ADD fixture.json /cabot/
