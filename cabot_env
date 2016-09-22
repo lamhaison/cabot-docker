@@ -15,6 +15,7 @@ SES_HOST=__FIX_ME__
 SES_USER=__FIX_ME__
 SES_PASS=__FIX_ME__
 SES_PORT=__FIX_ME__
+ADMIN_EMAIL=__FIX_MF__
 CABOT_FROM_EMAIL=__FIX_ME__
 # Default Mail-Backend is django_smtp_ssl.SSLEmailBackend
 # only uncomment if you want simple SMTP without encryption
@@ -29,3 +30,6 @@ JENKINS_PASS=_FIX_ME__
 TWILIO_ACCOUNT_SID=_FIX_ME__
 TWILIO_AUTH_TOKEN=_FIX_ME__
 TWILIO_OUTGOING_NUMBER=_FIX_ME__
+
+# Plugin alert
+CABOT_PLUGINS_ENABLED=cabot_alert_hipchat==1.7.0,cabot_alert_twilio==1.1.4,cabot_alert_email==1.3.1.lhs
